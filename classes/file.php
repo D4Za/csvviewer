@@ -2,7 +2,12 @@
 
 class File {
     public static function load_csv($filename){
+        $csv_string = "";
         $row_array = file($filename);
-        return $row_array;
+        foreach ($row_array as $row) {
+            $csv_string .= $row . "|";
+        }
+        $pagemanager = new Pagemanager($csv_string);
+        return $pagemanager;
     }
 }

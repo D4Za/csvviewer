@@ -1,7 +1,7 @@
 <?php
 
-class Cmdln {
-  public static function parse(){
+class Startdialog {
+  public static function parsen(){
       $args['filename'] = $_SERVER['argv'][1];
       return $args;
   }
